@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -137,11 +137,7 @@
         hankakuzenkaku: hankakuzenkaku {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LALT>,
-                <&macro_press>,
-                <&kp GRAVE>,
-                <&macro_release>;
+            bindings = <&macro_press>, <&kp LALT &kp GRAVE>, <&macro_release>;
 
             label = "HANKAKUZENKAKU";
         };
