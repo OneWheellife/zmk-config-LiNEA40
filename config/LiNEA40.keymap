@@ -44,6 +44,7 @@
         };
 
         // 名前を変更（my_scroll_scaler など、重複しない名前に）
+
         my_scroll_scaler: my_scroll_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
@@ -66,9 +67,10 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>,
-            <&my_scroll_scaler 1 1>;  // ← 変換後にスケーリング（1/1速度）
+            <&my_scroll_scaler 1 1>;
+  // ← 変換後にスケーリング（1/1速度）
     };
 };
 
@@ -220,9 +222,9 @@
 
         SCROLL {
             bindings = <
-&trans            &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                               &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&kp LG(LS(LEFT))  &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &kp LS(LG(RIGHT))                    &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME          &kp PAGE_DOWN           &kp PAGE_UP   &kp END                  &trans                               &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+&kp LS(LG(LEFT))  &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &kp LS(LG(RIGHT))                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
+&kp HOME          &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &kp END                              &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
+&trans            &kp PAGE_DOWN           &kp PAGE_UP   &trans                   &trans                               &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans            &trans                  &trans        &trans                   &trans             &trans    &trans  &kp NUMBER_0                   &kp NUMBER_0  &kp DOT       &kp QUESTION
             >;
 
