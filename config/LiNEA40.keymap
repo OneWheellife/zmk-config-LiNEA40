@@ -67,7 +67,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>,
             <&my_scroll_scaler 1 1>;
 
@@ -160,6 +160,20 @@
 
             label = "HANKAKUZENKAKU";
         };
+
+        ai_chat_user: ai_chat_user {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LT &kp U &kp S &kp E &kp R &kp GT>;
+            label = "AI_CHAT_USER";
+        };
+
+        ai_chat_char: ai_chat_char {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LT &kp C &kp H &kp A &kp R &kp GT>;
+            label = "AI_CHAT_CHAR";
+        };
     };
 
     keymap {
@@ -194,7 +208,7 @@
 &kp EXCLAMATION             &kp AT           &kp HASH         &kp DOLLAR     &kp PERCENT                    &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp NON_US_BACKSLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp SEMICOLON  &kp COLON                      &kp C_MUTE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp EQUAL
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp APOS       &kp SQT                        &kp KP_EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)     &kp LS(INT1)
-&trans                      &trans           &trans           &trans         &trans       &trans    &trans  &trans                          &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
+&trans                      &trans           &trans           &trans         &trans       &trans    &trans  &trans                          &ai_chat_user      &ai_chat_char         &kp LS(QUESTION)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
