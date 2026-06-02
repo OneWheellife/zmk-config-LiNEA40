@@ -192,7 +192,7 @@
 
         //1
 
-        MOUSE {
+        mouse_layer {
             bindings = <
 &trans  &trans  &trans  &trans    &trans                    &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &mkp MB1  &trans                    &trans  &mkp MB1  &trans  &trans  &trans
@@ -203,7 +203,7 @@
 
         //2
 
-        MARK {
+        mark_layer {
             bindings = <
 &kp EXCLAMATION             &kp AT           &kp HASH         &kp DOLLAR     &kp PERCENT                    &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp NON_US_BACKSLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp SEMICOLON  &kp COLON                      &kp C_MUTE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp EQUAL
@@ -216,7 +216,7 @@
 
         //3
 
-        CURSOR {
+        cursor_layer {
             bindings = <
 &trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
 &trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
@@ -227,7 +227,7 @@
 
         //4
 
-        FUNCTION {
+        function_layer {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans      &kp LA(LEFT)  &kp LA(PRINTSCREEN)  &kp LA(RIGHT)  &kp LC(LA(DELETE))
 &kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &kp C_MUTE  &mkp LCLK     &kp LS(LG(S))        &mkp RCLK      &kp LC(LS(ESCAPE))
@@ -240,7 +240,7 @@
 
         //5
 
-        SCROLL {
+        scroll_layer {
             bindings = <
 &kp LS(LG(LEFT))  &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &kp LS(LG(RIGHT))                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
 &kp HOME          &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &kp END                              &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
@@ -253,7 +253,7 @@
 
         //6
 
-        WIRELESS {
+        wireless_layer {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans        &trans        &trans        &trans        &trans                               &trans          &trans        &trans        &trans        &trans
